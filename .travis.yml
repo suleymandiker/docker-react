@@ -1,0 +1,10 @@
+sudo: required
+services:
+   - docker
+
+
+before_install:
+    - docker build -t suleymandiker/docker-react -f Dockerfile.dev .
+
+script:
+    - dÄocker run suleymandiker/doÄcker-react npm run test -- --coverage 
